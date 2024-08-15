@@ -1,0 +1,7 @@
+#!/bin/bash 
+ 
+PORT=$(python -c 'import socket; s=socket.socket(); s.bind(("", 0)); print(s.getsockname()[1]); s.close()')
+
+echo "Listening on:" $PORT
+
+/usr/sbin/sshd -D -p ${PORT} -f /dev/null -h ${HOME}/.ssh/vcg_cluster_user_sshd
