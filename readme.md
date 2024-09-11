@@ -50,7 +50,7 @@ After following the steps below, you'll be able to connect your vscode directly 
     <id>  gpuhe.120     sshd     <user>  R        0:00:01      1     <compute_node_name>
     ```
 
-## Using Copilot When the Network is Blocked on Compute Nodes
+## Using Copilot When the Network is Blocked on Compute Nodes
 Some HPCs block the internet access in the compute nodes. Thus when you connect your vscode into these compute nodes, the copilot will not be able to connect as well. Luckily the solution is easy. Just put the following into your `options.json` file. Then, it'll magically start working.
 ```json
 "remote.extensionKind": {
