@@ -31,8 +31,26 @@ After following the steps below, you'll be able to connect your vscode directly 
         User <username>
         ProxyJump <slurm_hostname>
         PreferredAuthentications publickey
+        ForwardAgent yes
+        IdentityFile ~/.ssh/<your_key_name>
     ```
-    
+
+    ### An example setup
+   ```
+   Host einstein # einstein is the slurm host's name
+      HostName einstein.coolgpuserver.com # the ssh url to your server
+      User agoekmen # your username
+      IdentityFile ~/.ssh/id_rsa_einstein # your generated key's name
+      IdentitiesOnly yes
+
+   Host einstein-compute-large-1 !einstein # einstein-compute-large-1 is the assigned compute node name
+      User agoekmen
+      ProxyJump einstein # "Host" from previous configuration
+      ForwardAgent yes
+      IdentityFile ~/.ssh/id_rsa_einstein # your generated key's name
+      PreferredAuthentications publickey
+   ```
+
 ## Retrieving Compute Nodes
 
 1. Go into one of your cluster's login nodes. Simply type `ssh <slurm_hostname>` into your local terminal. Make sure that you are in a directory where `sshd.job` is visible. If you followed the steps above, it should be in your home directory.
