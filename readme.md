@@ -1,4 +1,4 @@
-# How to connect VSCode to slurm compute nodes to use debuggers (in 2 minutes)
+# How to connect VSCode to slurm compute nodes to use debuggers & jupyter notebooks etc. (in 2 minutes)
 
 ## Why?
 In my research internship, I found out that dealing with slurm login nodes is sometimes a bit painful, especially when it comes to running a debugger etc. 
