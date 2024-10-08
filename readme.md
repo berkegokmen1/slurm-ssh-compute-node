@@ -8,7 +8,7 @@ After following the steps below, you'll be able to connect your vscode directly 
 
 ## Setup
 
-1. Create SSH public key <br>
+1. Create SSH public key on your server (not your local machine). You'll be needing this key in the next step <br>
     You can follow the tutorial [here](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server) for this step.
 
 2. Setup `sshd.job` script <br>
